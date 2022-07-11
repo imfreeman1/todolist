@@ -26,9 +26,11 @@ function del(event){
 
 function handleSubmit(event){
     event.preventDefault();
-    const currentValue = input.value;
-    output(currentValue);
-    input.value = "";
+    if (input.value) {
+        const currentValue = input.value;
+        output(currentValue);
+        input.value = "";
+    }
     }
 function init() {
     todoForm.addEventListener('submit', handleSubmit);
