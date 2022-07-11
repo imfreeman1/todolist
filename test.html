@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <style type="text/css">
+        body{
+            width: 100vw;
+            height: 100vh;
+            background-color: #CDD1DE;
+        }
+        .todoTitle{
+            text-align: center;
+            -webkit-text-stroke-width: 4px;
+            -webkit-text-stroke-color: white;
+            margin-top: 200px;
+            font-size: 100px;
+            font-weight: bold;
+        }
+        #todoList li{
+            justify-content: center;
+            margin-top: 10px;
+            display: flex;
+            width: 100%;
+
+        }
+        .todoInput{
+            text-align: center;
+            width: 300px;
+            height: 50px;
+            font-size: 20px;}
+        #inputDiv{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="todoTitle">
+            TO DO LIST
+        </h1>
+    </div>
+    <div id="inputDiv">
+        <form id="todoForm">
+            <input type="text" class="todoInput" placeholder="해야할 일을 입력하세요">
+        </form>
+    </div>
+    <div id=mainDiv>
+        <ul id = todoList></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
