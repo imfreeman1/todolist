@@ -1,7 +1,7 @@
 const todoForm = document.querySelector("#todoForm"),
     input = todoForm.querySelector("input"),
     todoList = document.querySelector('#todoList');
-let mainDiv = document.querySelector("#mainDiv");
+let mainDiv = document.querySelector("#mainDiv")
 
 const TODO_Ls = 'toDos';
 let toDos = [];
@@ -22,6 +22,7 @@ function output(text) {
     li.id = newId;
     todoList.appendChild(li);
     Btn.addEventListener('click',del);
+    newDiv.addEventListener('dblclick', handleModify);
     const toDoObj = {
       text,
       id: newId,
@@ -30,6 +31,39 @@ function output(text) {
     saveToDos();
     }
 
+function handleModify(event) {
+    event.preventDefault();
+    const div = event.target;
+    const li = div.parentNode;
+    let form = document.createElement('form');
+    let input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    input.setAttribute('value', `${div.innerText}`);
+    form.appendChild(input);
+    div.style.visibility='hidden'
+    li.prepend(form);
+    form.addEventListener('submit', (text) => {
+        if (input.value) {
+            const currentValue = input.value;
+            div.innerText = currentValue;
+            form.remove();
+            div.style.visibility='visible'
+            saveModify(li,currentValue);
+        };
+    });
+    }
+    // form.addEventListener('submit', modify);
+
+
+function saveModify(li,text) {
+    const modifyLs = toDos.filter(function(toDo){
+        if (toDo.id === parseInt(li.id)){
+            toDo.text = text};
+        return toDo;
+    })
+    toDos = modifyLs; // 추출된 내용을 toDos에 넣음
+    saveToDos();
+}
 
 function del(event){
     const Btn = event.target;

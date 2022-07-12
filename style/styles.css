@@ -1,0 +1,64 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+    
+    *{
+        font-family: 'Jua', sans-serif;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-color: #CDD1DE;
+    }
+    .todoTitle{
+        text-align: center;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: white;
+        margin-top: 200px;
+        font-size: 100px;
+        font-weight:bolder;
+    }
+    #todoList li{
+        display: flex;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        width: 100%;
+        font-size: 22px;
+
+    }
+
+    div input {
+        background-color: #CDD1DE;
+        border: hidden;
+        font-size: 1em;
+    }
+
+    div input:focus{
+        outline: 3px solid white;
+    }
+
+    li button{
+        margin-left: auto;
+        width: 50px;
+        margin-right: 10px;
+    }
+    ul {
+        max-height: 700px;
+        overflow-y: scroll;
+        margin: auto;
+        border: 3px solid black;
+        width: 500px;
+        border-radius: 16px;
+        margin-bottom: 5px;
+    }
+    .todoInput{
+        outline: 3px solid white;
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #inputDiv{
+        text-align: center;
+    }
