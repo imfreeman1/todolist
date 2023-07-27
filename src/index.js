@@ -1,11 +1,9 @@
 import ("../style/styles.css")
 
-console.log("Hello World!");
-
 const todoForm = document.querySelector("#todoForm"),
     input = todoForm.querySelector("input"),
     todoList = document.querySelector('#todoList');
-let mainDiv = document.querySelector("#mainDiv")
+let mainDiv = document.querySelector("#mainDiv");
 
 const TODO_Ls = 'toDos';
 let toDos = [];
